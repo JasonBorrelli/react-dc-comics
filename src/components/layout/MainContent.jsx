@@ -5,9 +5,7 @@ export default function MainContent() {
     return (
         <main>
 
-            <div className="relative bg-[oklch(0.23_0_0)] text-white text-center pt-12 pb-8">
-
-
+            <div className="relative bg-[oklch(0.23_0_0)] text-white text-center pt-0 pb-8">
 
                 <Panel />
                 <div className="container mx-auto px-4 relative">

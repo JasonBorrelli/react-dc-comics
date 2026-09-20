@@ -192,7 +192,7 @@ export default function ProductList() {
                             title={comic.title}
                             price={comic.price}
                             series={comic.series}
-                            onImageClick={() => setActiveImage(comic.thumb, comic.price)}
+                            onImageClick={() => setActiveImage(comic.thumb)}
                         />
                     ))}
                 </div>
