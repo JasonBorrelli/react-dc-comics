@@ -1,3 +1,5 @@
+import Card from '../Card.jsx'
+
 const comics = [
     {
         id: 1,
@@ -179,15 +181,20 @@ const comics = [
 export default function ProductList() {
     return (
         <section>
-            <ul>
-                {comics.map((comic) => (
-                    <li key={comic.id}>
-                        <img src={comic.thumb} alt={comic.title} />
-                        <h3>{comic.title}</h3>
-                        <p>{comic.price}</p>
-                    </li>
-                ))}
-            </ul>
+            <div className="container mx-auto px-4 py-8">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    {comics.map((comic) => (
+                        <Card
+                            key={comic.id}
+                            thumb={comic.thumb}
+                            title={comic.title}
+                            price={comic.price}
+                            series={comic.series}
+                        />
+                    ))}
+                </div>
+            </div>
         </section>
+
     )
-}
+}   

@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer>
             <div className="bg-zinc-800 flex justify-between p-5 items-center">
-                <button className="text-white bg-transparent border border-blue-500 px-3 py-2 align-center ml-100">SIGN-UP NOW!</button>
+                <button className="text-white hover:bg-blue-500 bg-transparent border border-blue-500 px-3 py-2 align-center ml-100 cursor-pointer">SIGN-UP NOW!</button>
                 <div className="flex items-center gap-5 px-100 py-5">
                     <p className=" flex text-blue-500 text-lg font-bold bg-transparent px-3 py-2 align-center">FOLLOW US</p>
                     <ul className="flex space-between gap-5 justify-center align-center">
