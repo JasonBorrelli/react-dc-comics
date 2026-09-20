@@ -1,4 +1,5 @@
 import Card from '../Card.jsx'
+import { useState } from "react";
 
 const comics = [
     {
@@ -179,6 +180,7 @@ const comics = [
 
 
 export default function ProductList() {
+    const [activeImage, setActiveImage] = useState(null);
     return (
         <section>
             <div className="container mx-auto px-4 py-8">
@@ -190,10 +192,23 @@ export default function ProductList() {
                             title={comic.title}
                             price={comic.price}
                             series={comic.series}
+                            onImageClick={() => setActiveImage(comic.thumb, comic.price)}
                         />
                     ))}
                 </div>
             </div>
+            {activeImage && (
+                <div
+                    onClick={() => setActiveImage(null)}
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 cursor-pointer"
+                >
+                    <img
+                        src={activeImage}
+                        alt="Copertina ingrandita"
+                        className="max-w-[90vw] max-h-[85vh] object-contain rounded shadow-2xl transition-transform duration-200"
+                    />
+                </div>
+            )}
         </section>
 
     )
