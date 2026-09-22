@@ -6,17 +6,13 @@ import Footer from './components/layout/Footer.jsx'
 
 function App() {
   return (
-    <>
-      <header>
-        <Header />
-      </header>
-      <main>
-        <Main />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
+    <div className="app-layout">
+      <Header />
+
+      <Main />
+
+      <Footer />
+    </div>
   )
 }
 

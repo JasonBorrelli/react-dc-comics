@@ -1,1 +1,19 @@
 @import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-layout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+}
